@@ -1,0 +1,13 @@
+.icon
+{
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+}
+
+.icon img{
+    height: 42px;
+    width: 42px;
+    cursor: pointer;
+    
+}

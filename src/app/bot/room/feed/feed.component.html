@@ -1,0 +1,30 @@
+<div *ngFor="let message of messages" >
+    <!-- <div *ngIf="message.type=='joined'||message.type=='left'" class="m-1 my-2" >
+        <div  class="d-flex justify-content-center px-3">
+            <div *ngIf="message.sender==userData.name" >
+                <span class="notify px-2 py-1 mx-1">You {{message.type}}</span>
+            </div>   
+            <div *ngIf="message.sender!=userData.name">
+                <span class="notify px-2 py-1 mx-1">{{message.sender}} {{message.type}}</span>
+            </div>   
+        </div>
+    </div> -->
+
+    <div *ngIf="message.sender!='user'"  >
+        <div class="d-flex justify-content-start">
+            <div class="msg p-2 m-2">
+                <!-- <small>{{message.sender}}</small> -->
+                <div *ngFor="let x of message.text ">
+                    <h6 >{{x}}</h6>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="message.sender!='bot'">
+        <div class="d-flex justify-content-end">
+            <div class="msg2  p-1 px-2 m-1 mx-2">
+                    <h6 >{{message.text}}</h6>
+            </div>
+        </div>
+    </div>      
+</div>

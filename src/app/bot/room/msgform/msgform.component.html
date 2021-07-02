@@ -1,0 +1,14 @@
+<div class="input-container py-1 px-2">
+    <div class="d-flex align-items-center">
+        
+        <div class="d-flex flex-fill " style="background-color: white; border-radius: 7px;">
+            <input class="flex-fill p-1 " [(ngModel)]="message" (keyup)="submit($event)"
+                placeholder="ask a doubt.." type="text">
+        </div>
+        <div>
+            <button (click)="send()">
+                <img src="../../assets/send.png" alt="" height="25px" style="transform: rotate(45deg);">
+            </button>
+        </div>
+    </div>
+</div>
